@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(0, 100, 34);
+}
+
+#hexadecimal {
+    background-color: #33ab42;
+}
+
+#skrocony-hexadecimal {
+    background-color: #f49;
+}
+
+#rgb {
+    background-color: rgb(92, 58, 100);
+}
+
+#rgba {
+    background-color: rgba(235, 22, 32, 0.5);
+}
