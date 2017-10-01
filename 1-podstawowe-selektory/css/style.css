@@ -5,5 +5,10 @@ p {
 
 /*selektor id*/
 #drugi-paragraf {
-    background-color: aqua;
+    background-color: red;
 }
+
+.akademia {
+    background-color: aquamarine;
+}
+
