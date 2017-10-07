@@ -1,0 +1,214 @@
+/* selektor uniwersalny - lapie wszystkie elementy na stronie */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p { 
+    font-size: 30px;
+}
+
+/*selektor identyfikotora lapie element o określonym id e kodzie html */
+
+#testowy {
+    background-color: aqua;
+}
+
+
+/*selektor klasy lapie elementy o okresloonej klasie z kodu*/
+.testowy_inner {
+    color: green;
+    font-size: 36px;
+}
+
+/*selektor potomka lapie wszysrkich potomków okreslonych  przez selektor po spacji, niezaleznie od */
+
+#selektor_potomka p {
+    font-size: 48px;
+    color: red;
+}
+
+/*seloktor dziecka/bezposredniego potomka - lapie elementy na bezposrednim poziomie zagniezdenia 1 w dol*/
+
+#selektor_dziecka > p {
+    font-size: 40px;
+    color: violet;
+}
+
+/*seloktor brata/braci - lapie elementy bezposrednio po elemencie poprzedzajacym na tym samym poziomie zagniezdzenia */
+
+#selektor_braci > p {
+    font-size: 67px;
+    background-color: lightgreen;
+}
+
+/*pseudo elementy before/after nie istnieja bez ustawionej własciwosci Content moze byc nawet pusta*/
+
+#pseudoelementy h1::before {
+    content: ' Lorem ';
+        color: red;
+}
+
+#pseudoelementy h1::after {
+    content: ' Lorem ';
+        color: green;
+}
+
+/*first-letter -jezeli jest ustawiony before złapie ten before */
+#pseudoelementy h1::first-letter {
+        color: yellow;
+}
+
+/*pseudoelement ::first-letter lapie cala pierwsza linie posanego selektora */
+#pseudoelementy p.first-line::first-line {
+    color: chocolate;
+}
+
+/*pseudoklasy linkow*/
+/*pseudoklasa :link, sluzy do stylowania nieodwiedzonych linkow*/
+
+#linki a:link {
+    color: grey;
+}
+#linki a:visited {
+    color: pink;
+}
+
+/*pseudoklasa :hover po najechaniu myszka na element*/
+#linki a:hover {
+    color: orange;
+    font-size: 30px;
+}
+/*pseudoklasa :activ kiedy trzymamy LPM na elemencie*/
+#linki a:activ {
+    color: ;
+}
+/*pseudoklasa :focus kiedy uzupelniay inputy, textarea*/
+    
+#inputy input {
+    width: 99%;
+    margin-bottom: 20px;
+}
+
+#inputy input:focus {
+    border: 3px solid red;
+}
+
+/*pseudoelement :active okresla co ma sie srac z elementem do ktorego prowadzi kotwica (link z okreslonym id elementu)*/
+:target {
+    border: 1px solid black;
+}
+
+/*pseudoklasa :lang (nazwa jezyka) okresla odwolanie do elementu z atrybutem lang o okreslonej nazwie jezyka*/
+
+:lang(pl) {
+    
+}
+
+
+/*pseudoelement :first-child :last-child wybierają pierwszy i ostatni element z okreslonego selektora*/
+#lista-dzieci ul .list-item:first-child {
+    font-size: 30px;
+    color: red;
+}
+
+#lista-dzieci ul .list-item:last-child {
+    font-size: 30px;
+    color: blue;
+}
+
+/*pseudoklasa :only-child lapie element ktory jest jedynym dzieckiem/potomkem elementu nadrzednego*/
+#jedyne-dziecko span:only-child {
+    font-size: 30px;
+    font-style: italic;
+    color: green;
+}
+
+/*pseudoklasa :empty okresla element ktory nie posiada zadnego contentu*/
+div:empty {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+/*pseudoklasy :nth-child() i :nth-last-child() sluza do okreslenia elementow dzieci, mozemy wskazac konkretne dziecko, parzyste/nieparzyste dzieci, lun utworzyc wzor, dzieci i co ile dzieci maja byc wybierane*/
+
+#kontener .inner {
+    display: inline-block;
+    height: 300px;
+    background-color: red;
+    margin-bottom: 20px;
+    width: 33%;
+    float: left;
+    margin-right: 0.5%;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+#kontener .inner:nth-child(3),
+#kontener .inner:nth-child(6) {
+    margin-right: 0;
+}
+/*co trzeci element liczac od trzeciego*/
+#kontener .inner:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+/*selektory atrybotow - selektor[attr] okresla elementy, ktore maja atrybut attr, niezaleznie od ich wartosci*/
+input[type] {
+    background-color: green;
+}
+
+
+/*selector[attr="val"] okresla elementy, ktore posiadaja atrybut attr o okreslonej wartosci "val"*/
+
+input[type="tel"] {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
