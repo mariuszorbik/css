@@ -160,6 +160,10 @@ div:empty {
     margin-right: 0;
 }
 
+#kontener .inner:nth-child(3n+2) {
+    background-color: yellow;
+}
+
 /*selektory atrybotow - selektor[attr] okresla elementy, ktore maja atrybut attr, niezaleznie od ich wartosci*/
 input[type] {
     background-color: green;
@@ -172,14 +176,25 @@ input[type="tel"] {
     background-color: red;
 }
 
+/*selektor[attr~='val'] - okresla element, ktory posiada atrybut, ktory w wartosci posiada dana ciag znakow (dokladnie) */
 
+input[type~="opis"] {
+    background-color: black;
+}
 
+/*selektor [attr*="val"] okresla element, ktory w atrybucie posiada wystapienie ciagu znakow*/
 
+input[type*="piaty"] {
+    background-color: blue;
+}
 
+input[type^="poczatek"] {
+    background-color: hotpink;
+}
 
-
-
-
+input[type$="koniec"] { /*moze byc tez sama koncowka np. "iec" */
+    background-color: blueviolet;
+}
 
 
 
