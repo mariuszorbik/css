@@ -126,11 +126,13 @@ p {
 }
 
 /*pseudoklasa :empty okresla element ktory nie posiada zadnego contentu*/
+
 div:empty {
     display: block;
     width: 300px;
     height: 300px;
     background-color: aquamarine;
+
 }
 
 /*pseudoklasy :nth-child() i :nth-last-child() sluza do okreslenia elementow dzieci, mozemy wskazac konkretne dziecko, parzyste/nieparzyste dzieci, lun utworzyc wzor, dzieci i co ile dzieci maja byc wybierane*/
@@ -195,6 +197,79 @@ input[type^="poczatek"] {
 input[type$="koniec"] { /*moze byc tez sama koncowka np. "iec" */
     background-color: blueviolet;
 }
+
+#floated img {
+    float: left;
+}
+
+div {
+    background-color: darkgrey;
+}
+
+/*żeby wyłaczyć opływanie należy skorzystać z właściwości clear: both*/
+
+#tranzycje .inner-1, 
+#tranzycje .inner-2 {
+    height: 300px;
+    width: 50%;
+}
+
+#tranzycje .inner-1 {
+    background-color: red;
+/*
+    transition-property: width;
+    transition-duration: 2s;
+*/
+    transition: all, 0.4s;
+    
+}
+
+#tranzycje .inner-1:hover {
+    background-color: blue;
+    width: 80%;
+ 
+}
+
+#tranzycje .inner-2 {
+    background-color: aqua
+}
+
+
+#tlo {
+    width: 50%;
+    height: 700px;
+/*
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Bali_Labeled.png/240px-Bali_Labeled.png);
+      linear-gradient(rgba(0,0,0,0.5), rgba(20,255,100,0.6));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+*/
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Bali_Labeled.png/240px-Bali_Labeled.png) repeat-x;
+    overflow: scroll;
+    padding: 50px;
+    box-sizing: border-box;
+    border: 100px solid black;
+}
+
+#tlo p {
+    font-size: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
