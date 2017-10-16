@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    transition: all 2s;
+}
+
+#tlo {
+    background-image: url('http://www.tapeciarnia.pl/tapety/normalne/249860_sciana_graffiti_rozne_kolory_tlo_dla_dzieci.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#kurtyna-gora {
+    background-color: aliceblue;
+    width: 100%;
+    height: 50vh;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    
+}
+
+@keyframes slide {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 50vh;
+    }
+}
+
+
+
+#kurtyna-dol {
+    position: absolute;
+    background-color: aliceblue;
+    width: 100%;
+    height: 50vh;
+    top: 50%;
+    animation-name: up;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes up {
+    0% {
+        top: 100%;
+        height: 0;
+    }
+    100% {
+        top: 50%;
+        height: 50vh;
+    }
+}

@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: darkcyan;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    background-color: darkcyan;
+    transform: translate(-50%, -50%);
+}
+
+.square {
+    height: 30px;
+    width: 30px;
+    background-color: limegreen;
+    position: absolute;
+}
+
+.square:first-child {
+    top: 0;
+    left: 0;
+    animation: load-one;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.square:last-child {
+    bottom: 0;
+    right: 0;
+    animation: load-two;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes load-one {
+    0% {
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 85px;
+        left: 0px;
+        height: 15px;
+        width: 15px;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 70px;
+        left: 70px;
+        height: 30px;
+        width: 30px;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 0;
+        left: 85px;
+        height: 15px;
+        width: 15px;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load-two {
+    0% {
+        top: 70px;
+        left: 70px;
+        height: 30px;
+        width: 30px;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 0px;
+        left: 85px;
+        height: 15px;
+        width: 15px;
+        transform: rotate(90deg);
+    }
+    50% {
+        top: 0px;
+        left: 0px;
+        height: 30px;
+        width: 30px;
+        transform: rotate(180deg);
+    }
+    75% {
+        top: 85px;
+        left: 0px;
+        height: 15px;
+        width: 15px;
+        transform: rotate(270deg);
+    }
+    100% {
+        top: 70px;
+        left: 70px;
+        height: 30px;
+        width: 30px;
+        transform: rotate(360deg);
+    }
+}

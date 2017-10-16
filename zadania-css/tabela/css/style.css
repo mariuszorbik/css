@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.column {
+    height: 100vh;
+    width: 25%;
+    display: inline-block;
+    float: left;
+    transition: all 0.5s linear;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    
+}
+
+#background-1 {
+    background-color: black;
+}
+
+#background-2 {
+    background-color: aqua;
+}
+
+#background-3 {
+    background-color: green;
+}
+
+#background-4 {
+    background-color: yellow;
+}
+
+.column:hover {
+    width: 40%;
+}
+
+.container:hover .column:not(:hover) {
+    width: 20%;
+}

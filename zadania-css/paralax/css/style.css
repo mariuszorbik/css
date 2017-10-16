@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+
+section {
+    background-color: beige;
+    overflow: hidden;
+    padding: 100px;
+}
+
+aside {
+    padding: 0;
+    width: 100vw;
+    height: 300px;
+    background-attachment: fixed;
+}
+
+#parallax {
+    background-image: url("http://www.tapeciarnia.pl/tapety/normalne/249860_sciana_graffiti_rozne_kolory_tlo_dla_dzieci.jpg");
+}
+
+
